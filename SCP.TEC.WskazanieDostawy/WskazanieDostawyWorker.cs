@@ -14,19 +14,19 @@ namespace SCP.TEC.WskazanieDostawy
     {
 
         [Context]
-        PozycjaDokHandlowego Poz { get; set; }
+        public PozycjaDokHandlowego Poz { get; set; }
 
         [Context]
-        Context context { get; set; }
+        public Context context { get; set; }
 
 
 
         // TODO -> Należy podmienić podany opis akcji na bardziej czytelny dla uzytkownika
         [Action("WskazanieDostawyWorker/ToDo", Mode = ActionMode.SingleSession | ActionMode.ConfirmSave | ActionMode.Progress)]
-        public MessageBoxInformation ToDo(Context context)
+        public MessageBoxInformation ToDo(/*Context context*/)
         {
 
-            this.context = context;
+            //this.context = context;
             if (context == null)
                 throw new Exception ("context == null");
 
@@ -49,7 +49,7 @@ namespace SCP.TEC.WskazanieDostawy
 
 
 
-        private string PrzypiszDostawe()
+        public string PrzypiszDostawe()
         {
             Log log = new Log("WskazanieDostawy", true);
 

@@ -28,6 +28,19 @@ namespace SCP.TEC.WskazanieDostawy
 
         private static void WybierzDostawy(PozycjaDokHandlowegoRow row, ref Quantity value)
         {
+
+
+
+            //https://dok.enova365.pl/Developers/33472
+            /*
+             * porównywać starą ilość z nową
+             * starą ilość pobieramy z jakiejść zmiennej
+             * 
+             * staą ilość updateujemy po sprrawdzeniu/ ustawieniu nowej ilości
+             * 
+             * 
+             * 
+             */ 
             if (row == null) { return; }
             PozycjaDokHandlowego poz = row as PozycjaDokHandlowego;
 
